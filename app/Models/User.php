@@ -21,6 +21,12 @@ class User extends Authenticatable
         'name', 'email', 'phone', 'birth_date',
     ];
 
+    // phone column mutator
+    public function setPhoneAttribute($value)
+    {
+        $this->attributes['phone'] = ltrim($value, '+');
+    }
+
     public function scopeSearch($query, array $search)
     {
 
