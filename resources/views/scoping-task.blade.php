@@ -36,9 +36,9 @@
                 <h1 class="display-5 fw-bold text-body-emphasis my-4">Explanation</h1>
                 <div class="py-2">
                     <p>
-                        To fullfill the requirement of enabling cmpanies toa add multiple email addresses for different
+                        To fulfill the requirement of enabling companies toa add multiple email addresses for different
                         types of communication,
-                        several changes are needed in the database and in application logich
+                        several changes are needed in the database and in application logic
                     </p>
                     <p class="m-0 mb-1 text-start">
                         - Create new table email_addresses to store email addresses,
@@ -54,7 +54,8 @@
                         - Provide option for selecting the type of communication for each email address
                     </p>
                     <p class="m-0 mb-1 text-start">
-                        - Modify database queries and ORM relationships to handle CRUD operations for multiple email addresses,
+                        - Modify database queries and ORM relationships to handle CRUD operations for multiple email
+                        addresses,
                     </p>
                     <p class="m-0 mb-1 text-start">
                         - Update the data access layer to fetch and display multiple email addresses for company's
