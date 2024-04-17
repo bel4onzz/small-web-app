@@ -53,7 +53,7 @@
 </div>
 
 <script>
-    $(".submit-modal").on("click", function(e) {
+    $(".submit-modal").unbind().on("click", function(e) {
         e.preventDefault();
 
         var form = $("#add_new_user");
@@ -91,7 +91,7 @@
                 },
                 error: function(response) {
                     for (const value in response.responseJSON.errors) {
-                        $('[name="' + value + '"]').parsley().addError("validUrlError", {
+                        $('[name="' + value + '"]').parsley()[0].addError("serverValidationError", {
                             message: response.responseJSON.errors[value][0]
                         });
                     }
