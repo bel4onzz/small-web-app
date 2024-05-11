@@ -1,5 +1,5 @@
 // Function to fetch table data
-function fetchTableData(page = 1, search = "") {
+async function fetchTableData(page = 1, search = "") {
     $("#users_table").html("");
 
     $.ajax({
@@ -11,7 +11,7 @@ function fetchTableData(page = 1, search = "") {
         complete: function () {
             $("#search_table").focus();
 
-            tableActions()
+            tableActions();
         },
     });
 }
@@ -64,10 +64,9 @@ function getUser(userId, action = "edit") {
 }
 
 function tableActions() {
-    console.log("TABLE ACTIONS :::> ")
     // Pagination AJAX
     $("#pagination_links a")
-        // .unbind()
+        .unbind()
         .on("click", function (event) {
             event.preventDefault();
 
@@ -80,7 +79,7 @@ function tableActions() {
 
     // Edit user
     $(".edit-user")
-        // .unbind()
+        .unbind()
         .on("click", function (event) {
             event.preventDefault();
 
@@ -91,7 +90,7 @@ function tableActions() {
 
     // Delete user
     $(".delete-user-icon")
-        // .unbind()
+        .unbind()
         .on("click", function (event) {
             event.preventDefault();
 
@@ -102,7 +101,6 @@ function tableActions() {
 }
 
 function submitModalForm() {
-    // Submit form-modal
     $(".submit-modal")
         .unbind()
         .on("click", function (e) {
@@ -212,9 +210,14 @@ function resetModalData(userId) {
         },
     });
 }
-// Search functionality
-$(function () {
-    fetchTableData();
+
+$(async function () {
+    await fetchTableData();
+
+    //initialize create new modal form
+    submitModalForm();
+
+    // Search functionality
     $("#search_table")
         .unbind()
         .on("input", function () {
