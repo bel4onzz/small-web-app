@@ -26,7 +26,7 @@ class UserService
             ]);
         }
 
-        return view('users.index', $this->userRepository->getUsersPaginated());
+        return view('users.index', ["users" => [], "pagination" => []]);
     }
 
     // get data for user and prepare the modal

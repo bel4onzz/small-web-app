@@ -34,6 +34,15 @@
 
     </main>
 
+    <div id="page_loader" class="row align-items-center justify-content-center spinner-overlay d-none">
+        <div class="col-4 p-2 spinner-grow text-dark mx-2" role="status">
+        </div>
+        <div class="col-4 p-2 spinner-grow text-primary mx-2" role="status">
+        </div>
+        <div class="col-4 p-2 spinner-grow text-info mx-2" role="status">
+        </div>
+    </div>
+
     <script type="text/javascript">
         $("#datepicker").datepicker({
             format: "yyyy-mm-dd"

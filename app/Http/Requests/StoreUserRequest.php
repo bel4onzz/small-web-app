@@ -15,6 +15,20 @@ class StoreUserRequest extends FormRequest
         return true;
     }
 
+    protected function prepareForValidation()
+    {
+        // Get the value of the 'phone' field from the request data
+        $phone = $this->input('phone');
+
+        // Apply the same transformation as the mutator
+        $phone = ltrim($phone, '+');
+
+        // Update the request data with the transformed value
+        $this->merge([
+            'phone' => $phone,
+        ]);
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *

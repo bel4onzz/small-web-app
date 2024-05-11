@@ -47,4 +47,6 @@
             <x-table :users="$users" :pagination="$pagination" />
         </div>
     </div>
+
+    @vite('resources/js/table.js')
 </x-layout>
