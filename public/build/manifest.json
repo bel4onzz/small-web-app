@@ -5,8 +5,14 @@
     "src": "resources/js/app.js",
     "isEntry": true
   },
+  "resources/js/table.js": {
+    "file": "assets/table-Bpumjczj.js",
+    "name": "table",
+    "src": "resources/js/table.js",
+    "isEntry": true
+  },
   "resources/sass/app.scss": {
-    "file": "assets/app-BeHoZ3fY.css",
+    "file": "assets/app-C6DJ7ssN.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }
